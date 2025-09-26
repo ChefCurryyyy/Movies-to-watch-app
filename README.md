@@ -43,19 +43,13 @@ The app enables users to maintain a curated list of movies, track watched titles
 
 ### 3.1 Tech Stack
 - **Backend:** C# with ASP.NET Core MVC  
-- **Frontend:** Razor pages (or Blazor if preferred), HTML5, CSS3, JavaScript  
+- **Frontend:** Angular or some alternative 
 - **Styling:** Bootstrap/Tailwind for responsive web design  
 - **Database:** SQL Server (local) or PostgreSQL/MySQL alternative  
 - **ORM:** Entity Framework Core  
 - **Testing Framework:** xUnit or NUnit + Moq (for TDD)  
 
-### 3.2 Development Approach
-- **Test-Driven Development (TDD):**
-  1. Write unit tests for models, services, and controllers.  
-  2. Write integration tests for API/movie fetching.  
-  3. Ensure UI logic is tested with automated functional tests (e.g., Selenium or Playwright).  
-
-### 3.3 Database Schema
+### 3.2 Database Schema
 **Movies Table**
 
 | Field       | Type        | Notes                                |
@@ -111,29 +105,5 @@ The app enables users to maintain a curated list of movies, track watched titles
 - **Maintainability:** Follow MVC pattern with clean architecture.  
 - **Testing:** All features validated via TDD before implementation.  
 - **Security:** Input validation, CSRF protection, safe API requests.  
-
----
-
-## 6. Development Plan (Milestones)
-
-1. **MVP (Weeks 1–2)**  
-   - ASP.NET Core MVC setup  
-   - Movies CRUD (Create, Read, Update, Delete)  
-   - To Watch and Seen lists  
-   - Basic responsive design  
-
-2. **Integration (Weeks 3–4)**  
-   - OMDb API integration for movie details  
-   - Unit + integration tests for API service  
-
-3. **UI Improvements (Weeks 5–6)**  
-   - Fully responsive layout with Bootstrap/Tailwind  
-   - Priority highlighting  
-   - Dedicated Movie Detail page  
-
-4. **Testing & Polish (Weeks 7–8)**  
-   - Full TDD coverage (unit + integration + UI tests)  
-   - Optimize performance and responsiveness  
-   - Family testing + feedback  
 
 ---
