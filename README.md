@@ -43,11 +43,10 @@ The app enables users to maintain a curated list of movies, track watched titles
 
 ### 3.1 Tech Stack
 - **Backend:** C# with ASP.NET Core MVC  
-- **Frontend:** Angular or some alternative 
-- **Styling:** Bootstrap/Tailwind for responsive web design  
-- **Database:** SQL Server (local) or PostgreSQL/MySQL alternative  
-- **ORM:** Entity Framework Core  
-- **Testing Framework:** xUnit or NUnit + Moq (for TDD)  
+- **Frontend:** Angular
+- **Styling:** Angular Material  
+- **Database:** Postgresql
+- **Testing Framework:** xUnit + Moq (for TDD)  
 
 ### 3.2 Database Schema
 **Movies Table**
@@ -59,12 +58,12 @@ The app enables users to maintain a curated list of movies, track watched titles
 | description | Text        | Auto-fetched from API                |
 | rating      | Float       | IMDb rating                          |
 | cast        | Text/JSON   | List of main actors                  |
-| poster_url  | String      | Link to poster image                 |
 | priority    | Enum/Integer| 1=High, 2=Medium, 3=Low              |
 | status      | Enum/String | “to_watch” or “seen”                 |
 | date_added  | DateTime    | Default: now()                       |
 | date_seen   | DateTime    | Null if not seen                     |
 
+###
 ---
 
 ## 4. User Interface Specification
