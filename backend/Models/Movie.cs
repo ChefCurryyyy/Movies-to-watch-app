@@ -11,7 +11,7 @@ public class Movie
     public Status Status { get; set; } = Status.ToWatch;
     public DateTime CreatedAt { get; set; }
     public DateTime UpdatedAt { get; set; }
-        
+
     public enum Priority
     {
         High = 1,
