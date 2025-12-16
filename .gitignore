@@ -4,8 +4,8 @@ bin/
 obj/
 
 # User-specific files
-*.user
 *.suo
+*.user
 
 # Angular
 frontend/.vscode/
