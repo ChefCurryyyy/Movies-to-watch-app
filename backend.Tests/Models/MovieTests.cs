@@ -1,8 +1,8 @@
-﻿using System;
+using System;
 using MoviesToWatchApp.Backend.Models;
 using Xunit;
 
-namespace Backend.Tests.Unit;
+namespace Backend.Tests;
 
 public class MovieTests
 {

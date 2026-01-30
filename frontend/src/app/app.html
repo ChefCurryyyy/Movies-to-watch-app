@@ -1,16 +1,36 @@
-<main class="main">
-  <div class="content">
-    <app-movies-index></app-movies-index>
-  </div>
-</main>
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+               [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+               [mode]="(isHandset$ | async) ? 'over' : 'side'"
+               [opened]="(isHandset$ | async) === false">
 
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * The content above * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * * -->
-<!-- * * * * * * * * * * and can be replaced.  * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * End of Placeholder  * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+    <div class="sidenav-header" style="padding: 20px; background: linear-gradient(135deg, var(--primary-pastel), #fff); text-align: center;">
+      <mat-icon style="font-size: 48px; height: 48px; width: 48px; color: var(--detail-teal);">movie_filter</mat-icon>
+      <div style="font-weight: bold; color: var(--detail-teal); margin-top: 10px;">CINEMA BOX</div>
+    </div>
 
+    <mat-divider></mat-divider>
 
-<router-outlet />
+    <mat-nav-list>
+      <a mat-list-item routerLink="/movies_to_watch" routerLinkActive="active-link">
+        <mat-icon matListItemIcon>local_movies</mat-icon>
+        <span matListItemTitle>Watchlist</span>
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <mat-toolbar class="main-toolbar">
+      @if (isHandset$ | async) {
+        <button type="button" mat-icon-button (click)="drawer.toggle()">
+          <mat-icon>menu</mat-icon>
+        </button>
+      }
+
+    </mat-toolbar>
+
+    <main class="content-wrapper">
+      <router-outlet />
+    </main>
+  </mat-sidenav-content>
+</mat-sidenav-container>

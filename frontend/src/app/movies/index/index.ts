@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DatePipe } from '@angular/common';
-import { MoviesService } from '../../movies';
+import { MoviesService } from '../../services/movies';
 import { Movie } from '../../models/movie';
 
 import { MatTableModule } from '@angular/material/table';
@@ -20,6 +20,11 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
   styleUrl: './index.css',
 })
 export class MoviesIndex implements OnInit {
+  priorityMap: Record<number, string> = {
+    1: 'High',
+    2: 'Medium',
+    3: 'Low'
+  };
   movies: Movie[] = [];
   displayedColumns = ['title', 'priority', 'createdAt'];
   loading = true;

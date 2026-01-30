@@ -1,0 +1,51 @@
+.sidenav-container {
+  height: 100vh;
+}
+
+.sidenav {
+  width: 260px;
+  background-color: #fdfdfd;
+  border-right: 1px solid var(--light-cyan);
+}
+
+.sidenav mat-toolbar {
+  background-color: var(--primary-pastel) !important;
+  color: #333;
+  font-weight: 600;
+  letter-spacing: 1px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+/* 3. Navigation Item Details */
+.mat-nav-list a {
+  margin: 8px 12px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  color: #555;
+}
+
+.mat-nav-list a:hover {
+  background-color: var(--light-cyan) !important;
+}
+
+/* Active Link Composition */
+.active-link {
+  background-color: var(--light-cyan) !important;
+  color: var(--detail-teal) !important;
+  border-left: 4px solid var(--primary-pastel);
+}
+
+/* Icon Details */
+mat-icon[matListItemIcon] {
+  color: var(--accent-cyan);
+}
+
+/* 4. Top Toolbar (Matches Sidenav) */
+.main-toolbar {
+  background-color: var(--primary-pastel) !important;
+  color: #333 !important;
+}
+
+.content-wrapper {
+  padding: 1rem;
+}
