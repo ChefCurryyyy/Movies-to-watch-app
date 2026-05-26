@@ -36,6 +36,9 @@ public class AppDbContext : DbContext
 
             entity.Property(m => m.CreatedAt)
                 .HasDefaultValueSql("NOW()");
+            
+            entity.Property(m => m.UpdatedAt)
+                .HasDefaultValueSql("NOW()");
         });
     }
 }

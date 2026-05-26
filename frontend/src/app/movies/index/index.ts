@@ -39,7 +39,7 @@ export class MoviesIndex implements OnInit {
         this.loading = false;
       },
       error: () => {
-        this.error = 'Failed to laod movies.';
+        this.error = 'Failed to load movies.';
         this.loading = false;
       }
     })

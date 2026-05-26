@@ -18,9 +18,14 @@ public class MoviesController : ControllerBase
 
     // GET: api/movies
     [HttpGet]
-    public async Task<ActionResult<IEnumerable<Movie>>> GetMovies()
+    public async Task<ActionResult<IEnumerable<Movie>>> GetMovies([FromQuery] string? status)
     {
-        var movies = await _context.Movies
+        var query = _context.Movies.AsQueryable();
+
+        if (!string.IsNullOrEmpty(status) && Enum.TryParse<Movie.StatusType>(status, ignoreCase: true, out var parsedStatus))
+            query = query.Where(m => m.Status == parsedStatus);
+
+        var movies = await query
             .OrderByDescending(m => m.CreatedAt)
             .ToListAsync();
 
